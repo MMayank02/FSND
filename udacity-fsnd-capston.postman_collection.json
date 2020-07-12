@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "9b5e9ba5-2cca-45e7-ae8b-ee453752554d",
+		"name": "udacity-fsnd-capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local Test",
+			"item": [
+				{
+					"name": "Get /books",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/books?page=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete /books/<id>",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/books/6",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post /books",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "            {\r\n                \"bookname\" : \"blogg\",\r\n                \"author\" : \"Ange\",\r\n                \"price\" : 10,\r\n                \"category\" : \"science\",\r\n                \"quantity\" :100,\r\n                \"agegroup\" : \"9-12\"\r\n            }"
+						},
+						"url": {
+							"raw": "{{host}}/books",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch /books/id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "            {\r\n                \"bookname\" : \"blogger\",\r\n                \"author\" : \"-ve\",\r\n                \"price\" : 10,\r\n                \"category\" : 3,\r\n                \"quantity\" :100,\r\n                \"agegroup\" : 3\r\n            }"
+						},
+						"url": {
+							"raw": "{{host}}/books/4",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjExLW1uM3NIQ2taSHJDX0J0LXFmNyJ9.eyJpc3MiOiJodHRwczovL2Rldi00MzUwYWlqZy51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwOWZmOWYyZWIzMDMwMDE5Yzg2MmU2IiwiYXVkIjoiYm9va3Nob3AiLCJpYXQiOjE1OTQ1NjQ4ODUsImV4cCI6MTU5NDYzNjg4NSwiYXpwIjoiRUZneGxxdFM5dDFVdDdSbmhucVR5bHRwZjNDdjRuT0ciLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpib29rcyIsImdldDpib29rcyIsInBhdGNoOmJvb2tzIiwicG9zdDpib29rcyJdfQ.HYA5k1NJsX2K-v4VQxV1o07ofnRKdW85TFVbRyR0E0Q2ElG4h6XoTWt1YUva_n0bGNRPMcZeuDnHdT0dyiiBzOFyCTWr26G-0JqLClcd8xRr61KlNm_ph6XUeWB_6vpsO4LReB_0YjwDS8AXe-x8m5HzRuL7zG5012rnbD77bbZ8Q-8jlVpd-hFSwSxYFEGBhIB63uwpTHL6U3O3Tt6-IzwuBchbUcgTfrnY18MOryghXZj9BUzTn_qNWt0Rt7S6Shscz5kjd7Et_4Qe3rpTxrp6Quics9_C2KM7qRhBOOB9c004lkXA-JskXWC7NCIAPy_4d05eSg2KmhPUZwFWZQ",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "668a900f-b3c3-4f0e-9c63-b06531ed8856",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "fdb9572c-b0f3-4639-95f8-fb66449d4ff6",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Heroku Test",
+			"item": [
+				{
+					"name": "Get /books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://uda-capstone.herokuapp.com/books",
+							"protocol": "https",
+							"host": [
+								"uda-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get /books-details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{heroku}}/books-details",
+							"host": [
+								"{{heroku}}"
+							],
+							"path": [
+								"books-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post /books",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "            {\r\n                \"bookname\" : \"blogger\",\r\n                \"author\" : \"neha\",\r\n                \"price\" : 10,\r\n                \"category\" : \"science\",\r\n                \"quantity\" :100,\r\n                \"agegroup\" : \"9-12\"\r\n            }"
+						},
+						"url": {
+							"raw": "{{heroku}}/books",
+							"host": [
+								"{{heroku}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjExLW1uM3NIQ2taSHJDX0J0LXFmNyJ9.eyJpc3MiOiJodHRwczovL2Rldi00MzUwYWlqZy51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwOWZmOWYyZWIzMDMwMDE5Yzg2MmU2IiwiYXVkIjoiYm9va3Nob3AiLCJpYXQiOjE1OTQ1NjQ4ODUsImV4cCI6MTU5NDYzNjg4NSwiYXpwIjoiRUZneGxxdFM5dDFVdDdSbmhucVR5bHRwZjNDdjRuT0ciLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpib29rcyIsImdldDpib29rcyIsInBhdGNoOmJvb2tzIiwicG9zdDpib29rcyJdfQ.HYA5k1NJsX2K-v4VQxV1o07ofnRKdW85TFVbRyR0E0Q2ElG4h6XoTWt1YUva_n0bGNRPMcZeuDnHdT0dyiiBzOFyCTWr26G-0JqLClcd8xRr61KlNm_ph6XUeWB_6vpsO4LReB_0YjwDS8AXe-x8m5HzRuL7zG5012rnbD77bbZ8Q-8jlVpd-hFSwSxYFEGBhIB63uwpTHL6U3O3Tt6-IzwuBchbUcgTfrnY18MOryghXZj9BUzTn_qNWt0Rt7S6Shscz5kjd7Et_4Qe3rpTxrp6Quics9_C2KM7qRhBOOB9c004lkXA-JskXWC7NCIAPy_4d05eSg2KmhPUZwFWZQ",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1542f0b4-1ccb-4de1-912f-466f081784ff",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "fea2bc78-3339-4de4-9ca0-e6aae0f36cdb",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2c8f6ca3-e7a5-4ac4-8be4-6734972fe4fd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "57fd546d-4d86-450a-8f55-fa2d5a3ea1eb",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "228ea113-09a9-4820-bd17-7cad8b200f15",
+			"key": "host",
+			"value": "localhost:5000"
+		},
+		{
+			"id": "e7182c7d-dbe7-4869-80ef-75e21ba0469e",
+			"key": "heroku",
+			"value": "https://uda-capstone.herokuapp.com"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
